@@ -96,6 +96,15 @@ public class Main {
      * view menghapus todo
      */
     public static void viewRemoveTodoList() {
+        System.out.println("MENGHAPUS TODOLIST");
+
+        var number = input("Nomor yang Dihapus ");
+
+        boolean success = removeTodoList(Integer.valueOf(number));
+
+        if (!success) {
+             System.out.println("Gagal menghapus todolist : " + number);
+        }
 
     }
 
