@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static String[] model = new String[10];
 
@@ -9,7 +11,7 @@ public class Main {
 
       boolean isRemove = removeTodoList(4);
         if(isRemove){
-            showTodoList();
+            viewShowTodoList();
         } else {
             System.out.println("gagal remove");
         }
@@ -54,10 +56,38 @@ public class Main {
         }
     }
 
+
+    public static String input(String info) {
+        System.out.print(info + " : ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+
+    }
+
     /**
      * view menampilkan todolist
      */
     public static void viewShowTodoList() {
+        while (true) {
+            showTodoList();
+
+            System.out.println("MENU : ");
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("x. Keluar");
+
+            var input = input("Pilih");
+
+            if (input.equals("1")) {
+                viewAddTodoList();
+            } else if (input.equals("2")) {
+                viewRemoveTodoList();
+            } else if (input.equals("x")) {
+                break;
+            } else {
+                System.out.println("Pilihan tidak dimengerti");
+            }
+        }
 
     }
 
