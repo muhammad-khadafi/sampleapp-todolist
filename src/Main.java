@@ -58,12 +58,15 @@ public class Main {
      */
     public static void viewShowTodoList() {
         while (true) {
+            System.out.println("Todos : ");
             showTodoList();
 
+            System.out.println("*********** ");
             System.out.println("MENU : ");
             System.out.println("1. Tambah");
             System.out.println("2. Hapus");
             System.out.println("x. Keluar");
+            System.out.println("*********** ");
 
             var input = input("Pilih");
 
@@ -84,9 +87,12 @@ public class Main {
      * view menambah todo
      */
     public static void viewAddTodoList() {
+        System.out.println("-----------------");
         System.out.println("MENAMBAH TODOLIST");
 
         var todo = input("Todo ");
+
+        System.out.println("-----------------");
 
         addTodoList(todo);
 
@@ -96,9 +102,12 @@ public class Main {
      * view menghapus todo
      */
     public static void viewRemoveTodoList() {
+        System.out.println("-----------------");
         System.out.println("MENGHAPUS TODOLIST");
 
         var number = input("Nomor yang Dihapus ");
+
+        System.out.println("-----------------");
 
         boolean success = removeTodoList(Integer.valueOf(number));
 
