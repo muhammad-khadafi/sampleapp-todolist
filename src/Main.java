@@ -84,6 +84,11 @@ public class Main {
      * view menambah todo
      */
     public static void viewAddTodoList() {
+        System.out.println("MENAMBAH TODOLIST");
+
+        var todo = input("Todo ");
+
+        addTodoList(todo);
 
     }
 
