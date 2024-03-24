@@ -1,7 +1,12 @@
 public class Main {
     public static String[] model = new String[10];
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+      model[0] = "Bangun";
+      model[1] = "Sahur";
+      addTodoList("Makan");
+      addTodoList("Minum");
+     showTodoList();
     }
 
     /**
@@ -21,8 +26,13 @@ public class Main {
     /**
      * menambah todo
      */
-    public static void addTodoList() {
-
+    public static void addTodoList(String todo) {
+        for (var i = 0; i < model.length; i++) {
+            if (model[i] == null) {
+                model[i] = todo;
+                break;
+            }
+        }
     }
 
     /**
