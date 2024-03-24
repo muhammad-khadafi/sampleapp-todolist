@@ -6,7 +6,14 @@ public class Main {
       model[1] = "Sahur";
       addTodoList("Makan");
       addTodoList("Minum");
-     showTodoList();
+
+      boolean isRemove = removeTodoList(4);
+        if(isRemove){
+            showTodoList();
+        } else {
+            System.out.println("gagal remove");
+        }
+
     }
 
     /**
@@ -38,8 +45,13 @@ public class Main {
     /**
      * menghapus todo
      */
-    public static void removeTodoList() {
-
+    public static boolean removeTodoList(Integer number) {
+        if ((number - 1) >= model.length) {
+            return false;
+        } else {
+            model[number - 1] = null;
+            return true;
+        }
     }
 
     /**
