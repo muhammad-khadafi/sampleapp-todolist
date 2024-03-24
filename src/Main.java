@@ -24,4 +24,26 @@ public class Main {
     public static void removeTodoList() {
 
     }
+
+    /**
+     * view menampilkan todolist
+     */
+    public static void viewShowTodoList() {
+
+    }
+
+    /**
+     * view menambah todo
+     */
+    public static void viewAddTodoList() {
+
+    }
+
+    /**
+     * view menghapus todo
+     */
+    public static void viewRemoveTodoList() {
+
+    }
+
 }
