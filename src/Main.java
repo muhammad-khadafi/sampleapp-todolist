@@ -4,18 +4,7 @@ public class Main {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-      model[0] = "Bangun";
-      model[1] = "Sahur";
-      addTodoList("Makan");
-      addTodoList("Minum");
-
-      boolean isRemove = removeTodoList(4);
-        if(isRemove){
-            viewShowTodoList();
-        } else {
-            System.out.println("gagal remove");
-        }
-
+      viewShowTodoList();
     }
 
     /**
